@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo-docker-external
+
+server:
+  port: 8090
+
+api:
+  yahoo-finance:
+    domain: 'query1.finance.yahoo.com'
+    ohlc:
+      base-path: 'v8/finance/chart'
+      endpoint: '/0388.HK?period1=1388563200&period2=1509694074&interval=1d&events=history'

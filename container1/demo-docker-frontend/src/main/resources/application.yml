@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo-docker-frontend
+
+server:
+  port: 8091
+
+api:
+  demo-docker-backend:
+    domain: container1
+    port: 8090
+    names:
+      endpoint: '/names'
+    ohlc:
+      endpoint: '/ohlc'

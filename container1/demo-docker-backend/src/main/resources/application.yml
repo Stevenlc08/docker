@@ -1,0 +1,29 @@
+server:
+  port: 8090
+
+database:
+  db-name: "test_db"
+
+spring:
+  application:
+    name: demo-docker-backend
+  datasource:
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://postgresdb:5432/${database.db-name}"
+    username: "postgres"
+    password: "admin1234"
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create # update
+    # Hibernate ddl auto (create, create-drop, validate, update)
+  data:
+    redis:
+      host: redisserver # http://redisserver:6379
+      port: 6379
+
+api:
+  demo-docker-external:
+    domain: container2
+    port: 8090
+    names:
+      endpoint: '/ohlc'
